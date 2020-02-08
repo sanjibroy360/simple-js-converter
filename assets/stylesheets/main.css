@@ -65,6 +65,28 @@ input, button {
 
 /* Common */
 
+html, body {
+    font-size: 16px;
+}
+
+body {
+    
+    background: url(../media/back.jpg);
+    background-position: center;
+    background-size: cover;
+    opacity: 0.7;
+}
+
+.main-content {
+    padding-bottom: 2.5rem;
+    background: rgb(43, 24, 24);
+    z-index: 5;
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+    
+}
+
 .grid {
     display: grid;
     grid-template-columns: 1fr  1fr 1fr;
@@ -73,7 +95,7 @@ input, button {
 }
 
 .container {
-    max-width: 60rem;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -96,6 +118,9 @@ input, button {
     font-size: 1.6rem;
     font-weight: bold;
     text-align: center;
+    color: #fff;
+    opacity: 1;
+    z-index: 55;
     
 }
 
@@ -103,16 +128,59 @@ input, button {
    
     border: 0.5px solid #777;
     border-radius: 0.2rem;
-    
+    color: maroon;
+    background-color: gainsboro;
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.92rem;
+    opacity: 1;
+    z-index: 5;
 }
 
 .input-field:focus {
     outline: 1px solid rgb(89,187,103);
 }
 
-.input-field:hover {
-    outline: 1px solid greenyellow;
+
+@media all and (max-width : 767px) {
+    html,body {
+        font-size: 8px;
+    }
+
+
+    .input-field, .label {
+        padding: 2rem 0rem;
+        margin: 0rem 1rem;
+    }
+
+    .input-field {
+        margin-bottom: 15rem;
+        font-size: 1rem;
+    }
+    
+
+}
+
+@media all and (max-width : 380px) {
+    html,body {
+        font-size: 6px;
+    }
+
+    .main-content{
+        width: 100%;
+        padding-bottom: 4rem;
+    }
+
+
+    .input-field, .label {
+        padding: 2rem 0rem;
+        margin: 0rem 1rem;
+    }
+
+    .input-field {
+        margin-bottom: 15rem;
+        font-size: 1rem;
+    }
+    
+
 }
 
