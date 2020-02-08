@@ -1,0 +1,118 @@
+/* CSS Reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* My Reset */
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+input, button {
+    outline: 0;
+}
+
+/* Common */
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr  1fr 1fr;
+    justify-content: center;
+  
+}
+
+.container {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+
+.btn {
+    padding: 0.8rem 0;
+    width: 50%;
+    margin: 6rem auto;
+}
+
+/* input-fields */
+
+.input-field, .label {
+    padding: 1.1rem 0.1rem;
+    margin: 0rem 2rem;
+}
+
+.label {
+    margin-top: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+.input-field {    
+   
+    border: 0.5px solid #777;
+    border-radius: 0.2rem;
+    
+    text-align: center;
+    font-size: 1rem;
+}
+
+.input-field:focus {
+    outline: 1px solid rgb(89,187,103);
+}
+
+.input-field:hover {
+    outline: 1px solid greenyellow;
+}
+

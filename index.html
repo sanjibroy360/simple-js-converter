@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Converter</title>
+    <link rel="stylesheet" href="./assets/stylesheets/main.css">
+</head>
+
+<script>
+    function convert(choice) {
+        let m = 0;
+        let km = 0;
+        let cm = 0;
+        let inch = 0;
+        let ft = 0;
+        let m2 = 0;
+        let f = 0;
+        let k = 0;
+        let c = 0;
+        let valid = "Please, Enter A Valid Number !!!"; 
+        let possible = "Not Possible";
+        
+        switch(choice) {
+
+            case 1: km = document.getElementById("km").value;
+                    if(km === "") {
+                        document.getElementById("m").value = km;
+                        document.getElementById("cm").value = km;
+                    } else if(isNaN(+km)){
+                        document.getElementById("m").value = valid;
+                        document.getElementById("cm").value = valid;
+                    } else if(+km < 0) {
+                        document.getElementById("m").value = possible;
+                        document.getElementById("cm").value = possible;
+                    } else {
+                        document.getElementById("m").value = +km * 1000;
+                        document.getElementById("cm").value = +km * 100000;
+                    }
+                    break;
+            
+
+            case 2: m = document.getElementById("m").value;
+                    if(m === "") {
+                        document.getElementById("cm").value = m;
+                        document.getElementById("km").value = m;
+                    } else if(isNaN(+m)){
+                        document.getElementById("cm").value = valid;
+                        document.getElementById("km").value = valid;
+                    } else if(+m < 0) {
+                        document.getElementById("km").value = possible;
+                        document.getElementById("cm").value = possible;
+                    } else {
+                        document.getElementById("cm").value = +m * 100;
+                        document.getElementById("km").value = +m / 1000;
+                    }
+                    break;
+            case 3: cm = document.getElementById("cm").value;
+                    if(cm === "") {
+                        document.getElementById("m").value = cm;
+                        document.getElementById("km").value = cm;
+                    } else if(isNaN(+cm)){
+                        document.getElementById("m").value = valid;
+                        document.getElementById("km").value = valid;
+                    } else if(+cm < 0) {
+                        document.getElementById("km").value = possible;
+                        document.getElementById("m").value = possible;
+                    } else {
+                        document.getElementById("m").value = +cm / 100;
+                        document.getElementById("km").value = +cm / 100000;
+                    }
+                    break;
+
+        // Feet - inch - meter
+
+            case 4: ft = document.getElementById("ft").value;
+                    if(ft === "") {
+                        document.getElementById("inch").value = ft;
+                        document.getElementById("m2").value = ft;
+                    } else if(isNaN(+ft)){
+                        document.getElementById("m2").value = valid;
+                        document.getElementById("inch").value = valid;
+                    } else if(+ft < 0) {
+                        document.getElementById("inch").value = possible;
+                        document.getElementById("m2").value = possible;
+                    } else {
+                        document.getElementById("inch").value = +ft * 12;
+                        document.getElementById("m2").value = +ft * 0.3048;
+                    }
+                    break;
+            
+            case 5: inch = document.getElementById("inch").value;
+                    if(inch === "") {
+                        document.getElementById("ft").value = inch;
+                        document.getElementById("m2").value = inch;
+                    } else if(isNaN(+inch)){
+                        document.getElementById("m2").value = valid;
+                        document.getElementById("ft").value = valid;
+                    } else if(+inch < 0) {
+                        document.getElementById("ft").value = possible;
+                        document.getElementById("m2").value = possible;
+                    } else {
+                        document.getElementById("ft").value = +inch * 0.0833333;
+                        document.getElementById("m2").value = +inch * 0.0254;
+                    }
+                    break;
+            
+            case 6: m2 = document.getElementById("m2").value;
+                    if(m2 === "") {
+                        document.getElementById("ft").value = m2;
+                        document.getElementById("inch").value = m2;
+                    } else if(isNaN(+m2)){
+                        document.getElementById("ft").value = valid;
+                        document.getElementById("inch").value = valid;
+                    } else if(+m2 < 0) {
+                        document.getElementById("ft").value = possible;
+                        document.getElementById("inch").value = possible;
+                    } else {
+                        document.getElementById("ft").value = +m2 * 3.28084;
+                        document.getElementById("inch").value = +m2 * 39.3701;
+                    }
+                    break;
+            
+        //  Celsius - Fahrenheit - Kelvin
+
+            case 7: c = document.getElementById("c").value;
+                    if(c === "") {
+                        document.getElementById("f").value = c;
+                        document.getElementById("k").value = c;
+                    } else if(isNaN(+c)){
+                        document.getElementById("f").value = valid;
+                        document.getElementById("k").value = valid;
+                    } else {
+                        document.getElementById("f").value = (+c * (9 / 5))+32;
+                        document.getElementById("k").value = +c + 273.15;
+                    }
+                    break;
+            
+            case 8: f = document.getElementById("f").value;
+                    if(f === "") {
+                        document.getElementById("c").value = f;
+                        document.getElementById("k").value = f;
+                    } else if(isNaN(+f)){
+                        document.getElementById("c").value = valid;
+                        document.getElementById("k").value = valid;
+                    } else {
+                        document.getElementById("c").value = ( +f - 32) * (5 / 9);
+                        document.getElementById("k").value = ( +f - 32) * (5 / 9) + 273.15;
+                    }
+                    break;
+            case 9: k = document.getElementById("k").value;
+                    if(k === "") {
+                        document.getElementById("c").value = k;
+                        document.getElementById("f").value = k;
+                    } else if(isNaN(+k)){
+                        document.getElementById("c").value = valid;
+                        document.getElementById("f").value = valid;
+                    } else {
+                        document.getElementById("c").value = (+k - 273.15) * (9 / 5) + 32;
+                        document.getElementById("f").value = +k - 273.15;
+                    }
+                    break;
+            
+            
+
+            
+            
+        }
+        
+    }    
+</script>
+<body>
+    <section>
+        <form class="container grid">
+
+            <label class="label">Kilometer</label> 
+            <label class="label">Meter</label>
+            <label class="label">Centimeter</label>
+            
+            <input type="text" id="km" oninput="convert(1)"class="input-field">
+            <input type="text" id="m" oninput="convert(2)"class="input-field">
+            <input type="text" id="cm"  oninput="convert(3)" class="input-field">
+
+            <label class="label">Feet</label> 
+            <label class="label">Inches</label>
+            <label class="label">Meter</label>
+
+            <input type="text" id="ft" oninput="convert(4)"class="input-field">
+            <input type="text" id="inch" oninput="convert(5)"class="input-field">
+            <input type="text" id="m2"  oninput="convert(6)" class="input-field">
+
+            <label class="label">Celsius</label> 
+            <label class="label">Fahrenheit</label>
+            <label class="label">Kelvin</label>
+
+            <input type="text" id="c" oninput="convert(7)"class="input-field">
+            <input type="text" id="f" oninput="convert(8)"class="input-field">
+            <input type="text" id="k"  oninput="convert(9)" class="input-field">
+
+
+
+            
+           
+        </form>
+        
+    </section>
+</body>
+</html>
