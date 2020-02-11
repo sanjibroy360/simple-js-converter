@@ -11,7 +11,7 @@ function convert(choice) {
     let kmph = 0;
     let mps = 0;
     let mph = 0;
-    let valid = "Please, Enter A Valid Number !!!"; 
+    let valid = "Enter A Valid Number !!!"; 
     let possible = "Not Possible";
     
     switch(choice) {
